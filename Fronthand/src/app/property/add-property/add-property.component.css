@@ -1,0 +1,12 @@
+.savebtn{
+    margin-right: 5px;
+}
+.btn{
+    margin-top: 5px;
+}
+.ng-invalid.ng-touched{
+    border-color: red;
+}
+.error-block{
+    color: red;
+}
