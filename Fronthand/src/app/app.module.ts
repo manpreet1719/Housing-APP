@@ -14,6 +14,10 @@ import { PropertyDetailComponent } from './property/property-detail/property-det
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserLoginComponent } from './users/user-login/user-login.component';
 import { UserRegisterComponent } from './users/user-register/user-register.component';
+import { UserserviceService } from './services/userservice.service';
+import { AuthService } from './services/auth.service';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+
 
 const appRoutes :Routes = [
   {path: '' , component : PropertyListComponent},
@@ -42,10 +46,13 @@ const appRoutes :Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TooltipModule.forRoot(),
   ],
   providers: [
-    HousingService
+    HousingService,
+    UserserviceService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
